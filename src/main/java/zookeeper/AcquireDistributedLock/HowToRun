@@ -1,0 +1,31 @@
+- Download Zookeeper server
+- goto apache-zookeeper-3.8.1-bin
+- to Run, execute below command
+    bin/zkServer.sh start
+   If we see the below error
+
+   ZooKeeper JMX enabled by default
+   Using config: /Users/nkommidi/Downloads/apache-zookeeper-3.8.1-bin/bin/../conf/zoo.cfg
+   grep: /Users/nkommidi/Downloads/apache-zookeeper-3.8.1-bin/bin/../conf/zoo.cfg: No such file or directory
+   grep: /Users/nkommidi/Downloads/apache-zookeeper-3.8.1-bin/bin/../conf/zoo.cfg: No such file or directory
+   mkdir: : No such file or directory
+   Starting zookeeper ... bin/zkServer.sh: line 175: /zookeeper_server.pid: Read-only file system
+   FAILED TO WRITE PID
+
+ If we see the above error, move the properties to the conf/zoo.cfg file [execute below]
+mv conf/zoo_sample.cfg conf/zoo.cfg
+
+run command - bin/zkServer.sh start
+should see
+ZooKeeper JMX enabled by default
+Using config: /Users/nkommidi/Downloads/apache-zookeeper-3.8.1-bin/bin/../conf/zoo.cfg
+Starting zookeeper ... STARTED
+
+
+run all the applications
+app1
+app2
+app3
+app4
+
+
